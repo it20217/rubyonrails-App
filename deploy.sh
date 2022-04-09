@@ -21,7 +21,7 @@ fi
   
 
 # Create a container called node app that is available on port 8443 from our docker image
-docker create -p 8446:8446 --name node_app $IMAGE_NAME
+docker create -p 8446:8446 --name ruby_app $IMAGE_NAME
 
 # Write the private key to a file
 echo $PRIVATE_KEY > privatekey.pem
