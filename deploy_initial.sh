@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-sudo apt updates && sudo apt install yarn bundler
+sudo apt updates && sudo apt install ruby-full yarn bundler
 # Install pm2  wich is a production process manager for Node.js  with built-in load balancer
 # sudo npm install -g pm2
 # stop any instance of our application running currently

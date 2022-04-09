@@ -27,7 +27,7 @@ jobs:
       - setup_remote_docker
       - run:
           name: update-yarn
-          command: 'sudo yarn upgrade --latest'
+          command: 'sudo yarn upgrade'
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
