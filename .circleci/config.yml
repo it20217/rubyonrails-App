@@ -21,13 +21,13 @@ jobs:
   build:
     working_directory: ~/rubyonrails-App
     docker:
-      - image: cimg/ruby:3.0
+      - image: cimg/ruby:2.7
     steps:
       - checkout
       - setup_remote_docker
       - run:
           name: update-yarn
-          command: 'sudo yarn upgrade'
+          command: 'sudo apt install yarn'
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
