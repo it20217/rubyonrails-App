@@ -26,10 +26,13 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: update-yarn
-          command: 'sudo apt install yarn'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          name: update-apt
+          command: 'sudo apt update'
+      # - restore_cache:
+      #     key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: yarn-update
+          command: sudo apt install yarn
       - run:
           name: bundle-update
           command: bundle update
