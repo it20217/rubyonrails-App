@@ -21,7 +21,7 @@ jobs:
   build:
     working_directory: ~/rubyonrails-App
     docker:
-      - image: cimg/ruby:2.7
+      - image: cimg/ruby:2.7.0
     steps:
       - checkout
       - setup_remote_docker
